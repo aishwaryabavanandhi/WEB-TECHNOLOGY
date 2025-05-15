@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Online User-Friendly E-Learning Portal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0056b3;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #004494;
+    }
+    nav a {
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #003366;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    section {
+      background: white;
+      padding: 20px 30px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #0056b3;
+      margin-top: 0;
+    }
+    .courses-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .courses-list li {
+      background-color: #e7f0ff;
+      margin: 8px 0;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+      color: #777;
+      background-color: #f1f1f1;
+      margin-top: 40px;
+    }
+    button.cta {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+    button.cta:hover {
+      background-color: #003d80;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Online User-Friendly E-Learning Portal</h1>
+</header>
+
+<nav>
+  <a href="#courses">Courses</a>
+  <a href="#features">Features</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <section id="courses">
+    <h2>Our Courses</h2>
+    <p>Explore a variety of courses tailored for your learning needs:</p>
+    <ul class="courses-list">
+      <li>Introduction to Web Development</li>
+      <li>Data Science Fundamentals</li>
+      <li>Artificial Intelligence Basics</li>
+      <li>Cloud Computing Essentials</li>
+      <li>Cybersecurity Awareness</li>
+    </ul>
+    <button class="cta" onclick="enrollNow()">Enroll Now</button>
+  </section>
+
+  <section id="features">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>Intuitive and user-friendly interface</li>
+      <li>Interactive quizzes and assignments</li>
+      <li>AI-powered personalized learning paths</li>
+      <li>Mobile-friendly and accessible design</li>
+      <li>Real-time progress tracking and analytics</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? Reach out to our support team:</p>
+    <p>Email: <a href="mailto:support@elearningportal.com">support@elearningportal.com</a></p>
+    <p>Phone: +1 (555) 123-4567</p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Online User-Friendly E-Learning Portal. All rights reserved.
+</footer>
+
+<script>
+  function enrollNow() {
+    alert("Thank you for your interest! Please visit our registration page to enroll.");
+  }
+</script>
+
+</body>
+</html>
