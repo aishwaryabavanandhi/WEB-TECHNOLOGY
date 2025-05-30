@@ -1,0 +1,48 @@
+<nav>
+  <a href="#courses">Courses</a>
+  <a href="#features">Features</a>
+  <a href="#contact">Contact</a>
+  <a href="course-details.html" style="margin-left:auto; color:white; padding:15px 25px; font-weight:bold;">Next &rarr;</a>
+</nav>
+
+<main>
+  <section id="courses">
+    <h2>Our Courses</h2>
+    <p>Explore a variety of courses tailored for your learning needs:</p>
+    <ul class="courses-list">
+      <li>
+        Introduction to Web Development
+        <button onclick="goToCourse('web-development')" style="float:right;">View Details</button>
+      </li>
+      <li>
+        Data Science Fundamentals
+        <button onclick="goToCourse('data-science')" style="float:right;">View Details</button>
+      </li>
+      <li>
+        Artificial Intelligence Basics
+        <button onclick="goToCourse('ai-basics')" style="float:right;">View Details</button>
+      </li>
+      <li>
+        Cloud Computing Essentials
+        <button onclick="goToCourse('cloud-computing')" style="float:right;">View Details</button>
+      </li>
+      <li>
+        Cybersecurity Awareness
+        <button onclick="goToCourse('cybersecurity')" style="float:right;">View Details</button>
+      </li>
+    </ul>
+    <button class="cta" onclick="enrollNow()">Enroll Now</button>
+  </section>
+  <!-- rest of page remains same -->
+</main>
+
+<script>
+  function enrollNow() {
+    alert("Thank you for your interest! Please visit our registration page to enroll.");
+  }
+
+  function goToCourse(course) {
+    // Redirect to course details page with a query parameter to identify the course
+    window.location.href = 'course-details.html?course=' + course;
+  }
+</script>

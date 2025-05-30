@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Course Details - E-Learning Portal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9fafb;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0056b3;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    nav {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+    nav a {
+      background-color: #0056b3;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #003d80;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Course Details</h1>
+</header>
+
+<nav>
+  <a href="index.html">&larr; Back to Courses</a>
+  <a href="features.html">Next &rarr;</a>
+</nav>
+
+<main id="course-content">
+  <h2>Loading course info...</h2>
+</main>
+
+<script>
+  // Object with course info keyed by course id
+  const coursesInfo = {
+    'web-development': {
+      title: 'Introduction to Web Development',
+      description: 'Learn the fundamentals of building websites using HTML, CSS, and JavaScript. Perfect for beginners who want to create stunning and responsive web pages.',
+      duration: '6 weeks',
+      level: 'Beginner'
+    },
+    'data-science': {
+      title: 'Data Science Fundamentals',
+      description: 'Explore data analysis, visualization, and machine learning techniques using Python. Ideal for those looking to start a career in data science.',
+      duration: '8 weeks',
+      level: 'Intermediate'
+    },
+    'ai-basics': {
+      title: 'Artificial Intelligence Basics',
+      description: 'Get introduced to AI concepts including neural networks, natural language processing, and computer vision with practical projects.',
+      duration: '7 weeks',
+      level: 'Intermediate'
+    },
+    'cloud-computing': {
+      title: 'Cloud Computing Essentials',
+      description: 'Understand cloud infrastructure, services, and deployment models with hands-on labs using AWS and Azure.',
+      duration: '5 weeks',
+      level: 'Beginner'
+    },
+    'cybersecurity': {
+      title: 'Cybersecurity Awareness',
+      description: 'Learn how to protect systems and data from cyber threats with security fundamentals and best practices.',
+      duration: '4 weeks',
+      level: 'Beginner'
+    }
+  };
+
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  function loadCourse() {
+    const courseId = getQueryParam('course');
+    const courseContent = document.getElementById('course-content');
+    if(courseId && coursesInfo[courseId]) {
+      const c = coursesInfo[courseId];
+      courseContent.innerHTML = `
+        <h2>${c.title}</h2>
+        <p><strong>Description:</strong> ${c.description}</p>
+        <p><strong>Duration:</strong> ${c.duration}</p>
+        <p><strong>Level:</strong> ${c.level}</p>
+        <button onclick="enrollNow()" style="margin-top:20px; padding: 10px 20px; font-size: 1rem; cursor: pointer; background-color:#0056b3; color:#fff; border:none; border-radius:5px;">Enroll in this Course</button>
+      `;
+    } else {
+      courseContent.innerHTML = `<p>Course not found. <a href="index.html">Back to courses</a></p>`;
+    }
+  }
+
+  function enrollNow() {
+    alert('Thanks for your interest! Please visit our registration page to enroll.');
+  }
+
+  window.onload = loadCourse;
+</script>
+
+</body>
+</html>
