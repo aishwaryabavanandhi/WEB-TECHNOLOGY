@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyNotes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>StudyNotes</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#upload-section">Upload Notes</a>
+      <a href="#notes-section">Browse Notes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Welcome to StudyNotes</h2>
+      <p>A platform to upload, share, and find educational notes easily.</p>
+      <input type="text" id="searchInput" placeholder="Search notes by subject..." onkeyup="searchNotes()" />
+      <div class="webpage-image">
+        <img src="images/studynotes.png" alt="StudyNotes Webpage Screenshot" />
+      </div>
+    </section>
+
+    <section id="upload-section" class="upload">
+      <h3>Upload Your Notes</h3>
+      <form id="uploadForm">
+        <input type="text" id="noteTitle" placeholder="Title" required />
+        <input type="text" id="noteSubject" placeholder="Subject" required />
+        <textarea id="noteDescription" placeholder="Write a short description..." required></textarea>
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+
+    <section id="notes-section" class="notes">
+      <h3>Available Notes</h3>
+      <div id="notesList"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 StudyNotes. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
